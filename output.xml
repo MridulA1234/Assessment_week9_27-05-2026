@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.12.5 on win32)" generated="2026-05-26T21:21:53.578716" rpa="false" schemaversion="5">
+<suite id="s1" name="MagicBricks" source="C:\Users\BHAVRAJ SAIREM\Desktop\MagicBricks">
+<suite id="s1-s1" name="Tests" source="C:\Users\BHAVRAJ SAIREM\Desktop\MagicBricks\Tests">
+<suite id="s1-s1-s1" name="Functional" source="C:\Users\BHAVRAJ SAIREM\Desktop\MagicBricks\Tests\functional">
+<suite id="s1-s1-s1-s1" name="TC FLT 001" source="C:\Users\BHAVRAJ SAIREM\Desktop\MagicBricks\Tests\functional\TC_FLT_001.robot">
+<kw name="Setup Application" owner="common_resources" type="SETUP">
+<kw name="Load Environment" owner="common_resources">
+<kw name="Load Env" owner="env_loader">
+<arg>${ENV}</arg>
+<status status="PASS" start="2026-05-26T21:21:54.263547" elapsed="0.003196"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2026-05-26T21:21:54.267744" level="INFO">${url} = https://www.magicbricks.com/</msg>
+<var>${url}</var>
+<arg>baseurl</arg>
+<status status="PASS" start="2026-05-26T21:21:54.267744" elapsed="0.000000"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2026-05-26T21:21:54.268755" level="INFO">${phone_no} = 9831476621</msg>
+<var>${phone_no}</var>
+<arg>ph_no</arg>
+<status status="PASS" start="2026-05-26T21:21:54.267744" elapsed="0.001011"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2026-05-26T21:21:54.268755" level="INFO">${email} = </msg>
+<var>${email}</var>
+<arg>user_email</arg>
+<status status="PASS" start="2026-05-26T21:21:54.268755" elapsed="0.000000"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2026-05-26T21:21:54.268755" level="INFO">${pwd} = </msg>
+<var>${pwd}</var>
+<arg>user_password</arg>
+<status status="PASS" start="2026-05-26T21:21:54.268755" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-05-26T21:21:54.270760" level="INFO">${BASE_URL} = https://www.magicbricks.com/</msg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-05-26T21:21:54.269743" elapsed="0.001017"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-05-26T21:21:54.271744" level="INFO">${PHONE_NO} = 9831476621</msg>
+<arg>${PHONE_NO}</arg>
+<arg>${phone_no}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-05-26T21:21:54.270760" elapsed="0.000984"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-05-26T21:21:54.273251" level="INFO">${USER_EMAIL} = </msg>
+<arg>${USER_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-05-26T21:21:54.271744" elapsed="0.001507"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-05-26T21:21:54.275265" level="INFO">${USER_PWD} = </msg>
+<arg>${USER_PWD}</arg>
+<arg>${pwd}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-05-26T21:21:54.273251" elapsed="0.002014"/>
+</kw>
+<status status="PASS" start="2026-05-26T21:21:54.261542" elapsed="0.013723"/>
+</kw>
+<kw name="Open Application" owner="common_resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-26T21:21:54.276265" level="INFO">Opening browser 'chrome' to base url 'https://www.magicbricks.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-26T21:21:54.276265" elapsed="4.917499"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-26T21:21:59.194765" elapsed="0.040005"/>
+</kw>
+<doc>Opens the application</doc>
+<status status="PASS" start="2026-05-26T21:21:54.275265" elapsed="4.960906"/>
+</kw>
+<doc>Load environment and open application</doc>
+<status status="PASS" start="2026-05-26T21:21:54.260542" elapsed="4.975629"/>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="TC_FLT_004 Filter by Buy/Rent" line="39">
+<kw name="Search House_Land" owner="Search_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-26T21:21:59.239172" level="INFO">Clicking element 'xpath=//span[@class='mb-search__btn__icon']'.</msg>
+<arg>${search_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-26T21:21:59.238171" elapsed="1.819693"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-26T21:22:03.060234" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-26T21:22:01.058863" elapsed="2.001371"/>
+</kw>
+<doc>Searching for house/land</doc>
+<status status="PASS" start="2026-05-26T21:21:59.238171" elapsed="3.822063"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-26T21:22:06.062475" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-26T21:22:03.061274" elapsed="3.001720"/>
+</kw>
+<kw name="Filter by Buy_Rent" owner="Filter_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-26T21:22:06.066173" level="INFO">Clicking element 'xpath=(//div[@class='title-ellipsis'])[1]'.</msg>
+<arg>${buy_rent_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-26T21:22:06.064639" elapsed="0.372912"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-26T21:22:07.439114" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-26T21:22:06.437551" elapsed="1.001563"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-26T21:22:07.440591" level="INFO">Clicking element 'xpath=//label[contains(text(),'Rent')]'.</msg>
+<arg>xpath=//label[contains(text(),'Rent')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-26T21:22:07.440078" elapsed="0.165811"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-26T21:22:08.607575" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-26T21:22:07.605889" elapsed="1.001686"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-26T21:22:08.608203" level="INFO">Clicking element 'xpath=//div[text()='Yes']'.</msg>
+<arg>xpath=//div[text()='Yes']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-26T21:22:08.608203" elapsed="1.168613"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-26T21:22:10.778128" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-26T21:22:09.777821" elapsed="1.000307"/>
+</kw>
+<doc>Filtering properties by buy/rent</doc>
+<status status="PASS" start="2026-05-26T21:22:06.064639" elapsed="4.713489"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-26T21:22:13.779247" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-26T21:22:10.779153" elapsed="3.000094"/>
+</kw>
+<kw name="Clear Filter" owner="Filter_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-26T21:22:13.781475" level="INFO">Clicking element 'xpath=(//span[@class='filter__component__clear'])[1]'.</msg>
+<arg>xpath=(//span[@class='filter__component__clear'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-26T21:22:13.781475" elapsed="0.602347"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-26T21:22:16.386317" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-26T21:22:14.384822" elapsed="2.001495"/>
+</kw>
+<doc>Clearing applied filters</doc>
+<status status="PASS" start="2026-05-26T21:22:13.780262" elapsed="2.606055"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-26T21:22:19.388770" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-26T21:22:16.387345" elapsed="3.001425"/>
+</kw>
+<doc>Filtering properties by buy/rent</doc>
+<tag>functional</tag>
+<status status="PASS" start="2026-05-26T21:21:59.236171" elapsed="20.153612"/>
+</test>
+<kw name="Close Application" owner="common_resources" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-05-26T21:22:19.391785" elapsed="7.003548"/>
+</kw>
+<doc>Closing the application</doc>
+<status status="PASS" start="2026-05-26T21:22:19.391785" elapsed="7.004545"/>
+</kw>
+<status status="PASS" start="2026-05-26T21:21:53.689837" elapsed="32.706493"/>
+</suite>
+<status status="PASS" start="2026-05-26T21:21:53.686718" elapsed="32.712854"/>
+</suite>
+<status status="PASS" start="2026-05-26T21:21:53.683934" elapsed="32.718637"/>
+</suite>
+<status status="PASS" start="2026-05-26T21:21:53.583478" elapsed="32.820090"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">functional</stat>
+</tag>
+<suite>
+<stat name="MagicBricks" id="s1" pass="1" fail="0" skip="0">MagicBricks</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">MagicBricks.Tests</stat>
+<stat name="Functional" id="s1-s1-s1" pass="1" fail="0" skip="0">MagicBricks.Tests.Functional</stat>
+<stat name="TC FLT 001" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">MagicBricks.Tests.Functional.TC FLT 001</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
